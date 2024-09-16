@@ -6,7 +6,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e9ecef; /* لون خلفية الصفحة */
+    background-color: #f4f4f4; /* لون خلفية الصفحة */
 }
 
 header {
@@ -32,7 +32,7 @@ nav ul li a {
 }
 
 section {
-    padding: 20px;
+    padding: 40px; /* زيادة التباعد */
     margin: 20px auto;
     max-width: 800px; /* عرض أقصى للجزء */
     background-color: #ffffff; /* لون خلفية القسم */
@@ -40,36 +40,47 @@ section {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل خفيف */
 }
 
-/* محاذاة العناوين في المنتصف */
 h2 {
     text-align: center; /* محاذاة العنوان في المنتصف */
 }
 
-.gallery-container, .screenshot-container {
-    display: flex;
-    justify-content: center; /* محاذاة العناصر في المنتصف */
+/* سلايدر لقطات الشاشة */
+.swiper-container {
+   width: 100%;
+   height: 400px; /* تحديد ارتفاع ثابت للسلايدر */
+   position: relative; /* لجعل النقاط تحت الصورة */
 }
 
-.gallery-container img, .screenshot-container img {
-    width: 30%;
-    margin: 10px; /* تباعد بين الصور */
-    border-radius: 8px; /* زوايا دائرية للصورة */
+.swiper-slide {
+   opacity: 0; /* إخفاء جميع الشرائح في البداية */
+   transition: opacity 0.5s ease; /* تأثير سلس عند تغيير الشفافية */
+}
+
+.swiper-slide-active {
+   opacity: 1; /* إظهار الشريحة النشطة فقط */
+}
+
+.swiper-slide img {
+   width: 100%; /* عرض الصورة بالكامل */
+   height: 100%; /* جعل الصورة تأخذ كامل ارتفاع السلايدر */
+   object-fit: cover; /* الحفاظ على نسبة العرض إلى الارتفاع */
+   border-radius: 8px; /* زوايا دائرية للصورة */
 }
 
 /* تنسيق النموذج */
 form {
-    display: flex;
-    flex-direction: column;
+   display: flex;
+   flex-direction: column;
 }
 
 form label {
-    margin-top: 10px;
+   margin-top: 10px;
 }
 
 form input, form textarea {
-    padding: 10px;
-    border-radius: 5px; /* زوايا دائرية */
-    border: 1px solid #ccc; /* لون الحدود */
+   padding: 10px;
+   border-radius: 5px; /* زوايا دائرية */
+   border: 1px solid #ccc; /* لون الحدود */
 }
 
 /* زر إرسال */
@@ -106,7 +117,6 @@ form button:hover {
 
 .download-button:hover {
    background-color: #218838; /* لون أخضر داكن عند التمرير */
-   transform: scale(1.05); /* تأثير تكبير عند التمرير */
 }
 
 /* تنسيق الفوتر */
@@ -114,5 +124,5 @@ footer {
    background-color: #343a40; 
    color: #ffffff; 
    text-align: center; 
-   padding: 10px 0; 
+   padding: 10px 0;
 }
