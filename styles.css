@@ -7,7 +7,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4; /* لون خلفية الصفحة */
-    overflow-x: hidden; /* إخفاء التمرير الأفقي */
 }
 
 header {
@@ -52,9 +51,20 @@ h2 {
    position: relative; /* لجعل النقاط تحت الصورة */
 }
 
+.swiper-slide {
+   opacity: 0; /* إخفاء جميع الشرائح في البداية */
+   transition: opacity 0.5s ease; /* تأثير سلس عند تغيير الشفافية */
+   visibility: hidden; /* إخفاء الشرائح بشكل كامل */
+}
+
+.swiper-slide-active {
+   opacity: 1; /* إظهار الشريحة النشطة فقط */
+   visibility: visible; /* جعل الشريحة النشطة مرئية */
+}
+
 .swiper-slide img {
    width: 100%; /* عرض الصورة بالكامل */
-   height: auto; /* جعل الصورة تأخذ كامل ارتفاع السلايدر */
+   height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
    object-fit: cover; /* الحفاظ على نسبة العرض إلى الارتفاع */
    border-radius: 8px; /* زوايا دائرية للصورة */
 }
