@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>صفحتي المثالية</title>
 </head>
 <body>
@@ -12,7 +13,6 @@
         <nav>
             <ul>
                 <li><a href="#about">عن الموقع</a></li>
-                <li><a href="#gallery">المعرض</a></li>
                 <li><a href="#screenshots">لقطات الشاشة</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
@@ -22,24 +22,24 @@
     <section id="about">
         <h2>عن الموقع</h2>
         <p>هذا موقع بسيط تم إنشاؤه باستخدام HTML وCSS. يمكنك استخدامه كنموذج لتطبيقاتك الخاصة.</p>
-    </section>
-
-    <section id="gallery">
-        <h2>المعرض</h2>
-        <div class="gallery-container">
-            <img src="https://via.placeholder.com/300" alt="صورة 1">
-            <img src="https://via.placeholder.com/300" alt="صورة 2">
-            <img src="https://via.placeholder.com/300" alt="صورة 3">
-        </div>
+        <p>يهدف هذا الموقع إلى تقديم معلومات حول التطبيق وتجربته بشكل تفاعلي.</p>
     </section>
 
     <section id="screenshots">
         <h2>لقطات الشاشة</h2>
-        <div class="screenshot-container">
-            <img src="https://via.placeholder.com/300x600" alt="لقطة شاشة 1">
-            <img src="https://via.placeholder.com/300x600" alt="لقطة شاشة 2">
-            <img src="https://via.placeholder.com/300x600" alt="لقطة شاشة 3">
+        <!-- سلايدر لقطات الشاشة -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://via.placeholder.com/600x800" alt="لقطة شاشة 1"></div>
+                <div class="swiper-slide"><img src="https://via.placeholder.com/600x800" alt="لقطة شاشة 2"></div>
+                <div class="swiper-slide"><img src="https://via.placeholder.com/600x800" alt="لقطة شاشة 3"></div>
+            </div>
+
+            <!-- إضافة نقاط التنقل تحت الصور -->
+            <div class="swiper-pagination"></div>
+
         </div>
+
         <!-- زر التنزيل -->
         <div class="button-container">
             <button class="download-button">تنزيل التطبيق</button>
@@ -67,6 +67,11 @@
         <p>جميع الحقوق محفوظة © 2024</p>
     </footer>
 
-    <!-- إضافة تأثيرات جافاسكريبت -->
+    <!-- إضافة مكتبة Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- إعداد سلايدر لقطات الشاشة -->
+    <script src="script.js"></script>
+
 </body>
 </html>
