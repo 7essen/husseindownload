@@ -5,34 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <title>صفحتي المثالية</title>
+    <script src="https://code.jscharting.com/latest/jscharting.js"></script> <!-- إضافة مكتبة JSC -->
+    <title>7eSen TV  تنزيل</title>
 </head>
 <body>
     <header>
-        <h1>مرحباً بكم في صفحتي المثالية</h1>
+        <h1>Download 7eSen TV</h1>
+        <img src="./assets/IMG_3598.PNG" alt="صورة رئيسية" class="main-image"> <!-- استبدل بمسار الصورة الرئيسية -->
         <nav>
             <ul>
-                <li><a href="#about">عن الموقع</a></li>
+                <li><a href="#about">عن التطبيق</a></li>
                 <li><a href="#screenshots">لقطات الشاشة</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="#performance">أداء التطبيق</a></li> <!-- رابط جديد لأداء التطبيق -->
+                <li><a href="#download">تحميل التطبيق</a></li> <!-- رابط تحميل التطبيق -->
+                <li><a href="#social-media">حساباتي</a></li> <!-- رابط حسابات وسائل التواصل الاجتماعي -->
             </ul>
         </nav>
     </header>
 
     <section id="about">
-        <h2>عن الموقع</h2>
-        <p>هذا موقع بسيط تم إنشاؤه باستخدام HTML وCSS. يمكنك استخدامه كنموذج لتطبيقاتك الخاصة.</p>
-        <p>يهدف هذا الموقع إلى تقديم معلومات حول التطبيق وتجربته بشكل تفاعلي.</p>
+        <h2>عن التطبيق</h2>
+        <p>تطبيق 7eSen TV هو تطبيق لمشاهدة المباريات والقنوات الرياضية بأعلى جودة وبدون تقطيع.</p>
+        <p>يهدف هذا التطبيق إلى تقديم تجربة مشاهدة سلسة وتفاعلية للمستخدمين.</p>
     </section>
 
     <section id="screenshots">
         <h2>لقطات الشاشة</h2>
         <!-- سلايدر لقطات الشاشة -->
-        <div class="swiper-container">
+        <div class="swiper-container lg-hidden sm-visible-flex">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="https://via.placeholder.com/600x800" alt="لقطة شاشة 1"></div>
-                <div class="swiper-slide"><img src="https://via.placeholder.com/600x800" alt="لقطة شاشة 2"></div>
-                <div class="swiper-slide"><img src="https://via.placeholder.com/600x800" alt="لقطة شاشة 3"></div>
+                <div class="swiper-slide"><img src="./assets/screen1.jpeg" alt="لقطة شاشة 1"></div>
+                <div class="swiper-slide"><img src="./assets/screen2.jpeg" alt="لقطة شاشة 2"></div>
+                <div class="swiper-slide"><img src="./assets/screen3.jpeg" alt="لقطة شاشة 3"></div>
             </div>
 
             <!-- إضافة نقاط التنقل تحت الصور -->
@@ -42,35 +46,54 @@
 
         <!-- زر التنزيل -->
         <div class="button-container">
-            <button class="download-button">تنزيل التطبيق</button>
+            <h2>تحميل التطبيق</h2>
+            <div class="download-buttons">
+                <a href="link_to_mobile_download" class="download-button animated-button">
+                    تنزيل للهاتف
+                </a>
+                <a href="link_to_desktop_download" class="download-button animated-button">
+                    تنزيل للكمبيوتر
+                </a>
+            </div>
         </div>
+
     </section>
 
-    <section id="contact">
-        <h2>اتصل بنا</h2>
-        <form action="#">
-            <label for="name">الاسم:</label>
-            <input type="text" id="name" name="name" required>
+    <!-- قسم أداء التطبيق -->
+    <section id="performance">
+        <h2>أداء التطبيق مقارنة بالتطبيقات الأخرى</h2>
+        <!-- جدول البيانات -->
+        <table id="dataTable" style="display: none;">
+            <tr><td>7eSen TV</td><td>90</td></tr>
+            <tr><td>تطبيق A</td><td>70</td></tr>
+            <tr><td>تطبيق B</td><td>60</td></tr>
+            <tr><td>تطبيق C</td><td>50</td></tr>
+        </table>
 
-            <label for="email">البريد الإلكتروني:</label>
-            <input type="email" id="email" name="email" required>
+        <!-- عنصر الرسم البياني -->
+        <div id="chartDiv" style="width: 100%; height: 400px;"></div> 
+    </section>
 
-            <label for="message">الرسالة:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <!-- زر إرسال -->
-            <button type="submit">إرسال</button>
-        </form>
+    <!-- قسم حسابات وسائل التواصل الاجتماعي -->
+    <section id="social-media">
+        <h2>تابعنا على وسائل التواصل الاجتماعي</h2>
+        <div class="social-icons">
+            <a href="https://instagram.com/your_instagram_handle" target="_blank" class="social-icon">
+                <img src="./assets/instaicon.png" alt="إنستجرام"> <!-- استبدل بمسار أيقونة إنستجرام -->
+            </a>
+            <a href="https://t.me/your_telegram_handle" target="_blank" class="social-icon">
+                <img src="./assets/teleicon.png" alt="تيليجرام"> <!-- استبدل بمسار أيقونة تيليجرام -->
+            </a>
+        </div>
     </section>
 
     <footer>
         <p>جميع الحقوق محفوظة © 2024</p>
     </footer>
 
-    <!-- إضافة مكتبة Swiper.js -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- إعداد سلايدر لقطات الشاشة -->
+    
+
     <script src="script.js"></script>
 
 </body>

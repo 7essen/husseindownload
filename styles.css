@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -13,8 +12,13 @@ body {
 header {
     background: linear-gradient(to right, #007bff, #6610f2); /* خلفية متدرجة */
     color: #ffffff;
-    padding: 20px;
+    padding: 20px; /* زيادة الحواف */
     text-align: center; /* محاذاة النص إلى المنتصف */
+}
+
+.main-image {
+    max-width: 100%; /* تأكد من تناسب الصورة مع عرض الصفحة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
 }
 
 nav ul {
@@ -33,99 +37,135 @@ nav ul li a {
 }
 
 section {
-    padding: 40px; /* زيادة التباعد */
+    padding: 20px; /* زيادة الحواف إلى 20 بكسل */
     margin: 20px auto;
-    max-width: 800px; /* عرض أقصى للجزء */
+    max-width: 1200px; /* عرض أقصى للجزء */
     background-color: #ffffff; /* لون خلفية القسم */
-    border-radius: 8px; /* زوايا دائرية */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    border-radius: 25px; /* حواف دائرية للقسم */
 }
 
 h2 {
-    text-align: center; /* محاذاة العنوان في المنتصف */
+    text-align: right; /* محاذاة العنوان إلى اليمين */
 }
 
 /* سلايدر لقطات الشاشة */
 .swiper-container {
-   width: 100%;
-   height: 400px; /* تحديد ارتفاع ثابت للسلايدر */
-   position: relative; /* لجعل النقاط تحت الصورة */
+   width:100%;
+   height:auto; 
+   display:flex ;
+   justify-content:center;
+   overflow:hidden;
+   position:relative; /* لجعل النقاط تحت الصورة */
 }
 
 .swiper-slide {
-   opacity: 0; /* إخفاء جميع الشرائح في البداية */
-   transition: opacity 0.5s ease; /* تأثير سلس عند تغيير الشفافية */
-   visibility: hidden; /* إخفاء الشرائح بشكل كامل */
+   opacity :0; /* إخفاء جميع الشرائح في البداية */
+   transition :opacity .5s ease; /* تأثير سلس عند تغيير الشفافية */
+   visibility :hidden; /* إخفاء الشرائح بشكل كامل */
+   border-radius :25px; /* حواف دائرية للشرائح */
+   overflow:hidden;
 }
 
 .swiper-slide-active {
-   opacity: 1; /* إظهار الشريحة النشطة فقط */
-   visibility: visible; /* جعل الشريحة النشطة مرئية */
+   opacity :1; /* إظهار الشريحة النشطة فقط */
+   visibility :visible; /* جعل الشريحة النشطة مرئية */
+   display:flex;
+   justify-content:center;
+
 }
 
 .swiper-slide img {
-   width: 100%; /* عرض الصورة بالكامل */
+   width :100%; /* عرض الصورة بالكامل */
+   height:auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+   border-radius :25px !important; /* زوايا دائرية للصورة داخل السلايدر */
+}
+
+/* تنسيق أزرار التنزيل */
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* تباعد بين الأزرار */
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px; /* تباعد داخلي */
+    border-radius: 25px; /* زوايا دائرية */
+    background-color: #007bff; /* لون خلفية الزر */
+    color: white; /* لون النص */
+}
+
+.download-button:hover {
+    background-color: #0056b3; /* لون الزر عند التمرير */
+}
+
+/* تأثير الأنيميشن للأزرار عند التحميل */
+.animated-button {
+   animation: pulse-animation 1.5s infinite alternate;
+}
+
+/* تعريف تأثير الأنيميشن (نبض) */
+@keyframes pulse-animation {
+   from {
+       transform: scale(1);
+       box-shadow: 0 0 10px rgba(0,123,255,0.5);
+   }
+   to {
+       transform: scale(1.05);
+       box-shadow: 0 0 20px rgba(0,123,255,0.8);
+   }
+}
+
+/* تنسيق حسابات وسائل التواصل الاجتماعي */
+.social-icons {
+   display: flex;
+   justify-content: center;
+   gap: 20px; /* تباعد بين الأيقونات */
+   margin-top: 20px; /* تباعد أعلى الأيقونات */
+}
+
+.social-icon img {
+   width: 40px; /* عرض الأيقونة */
    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
-   object-fit: cover; /* الحفاظ على نسبة العرض إلى الارتفاع */
-   border-radius: 8px; /* زوايا دائرية للصورة */
 }
 
 /* تنسيق النموذج */
 form {
-   display: flex;
-   flex-direction: column;
+   display:flex;
+   flex-direction :column;
 }
 
 form label {
-   margin-top: 10px;
+   margin-top :10px ;
 }
 
-form input, form textarea {
-   padding: 10px;
-   border-radius: 5px; /* زوايا دائرية */
-   border: 1px solid #ccc; /* لون الحدود */
+form input,
+form textarea {
+   padding :10px ;
+   border-radius :25px; /* زوايا دائرية للنموذج */
+   border :1px solid #ccc; /* لون الحدود */
 }
 
 /* زر إرسال */
 form button {
-   margin-top: 10px;
-   padding: 10px;
-   border-radius: 5px; /* زوايا دائرية للزر */
-   border: none; /* إزالة الحدود */
-   background-color: #007bff; /* لون خلفية الزر */
-   color: white; /* لون النص */
-   transition: background-color 0.3s ease; /* تأثير سلس عند التمرير */
+   margin-top :10px ;
+   padding :10px ;
+   border-radius :25px; /* زوايا دائرية للزر */
+   border :none; /* إزالة الحدود */
+   background-color :#007bff; /* لون خلفية الزر */
+   color:white; /* لون النص */
+   transition :background-color .3s ease; /* تأثير سلس عند التمرير */
 }
 
 form button:hover {
-   background-color: #0056b3; /* لون الزر عند التمرير */
-}
-
-/* زر تنزيل */
-.button-container {
-   text-align: center; /* محاذاة الزر في المنتصف */
-   margin-top: 20px; /* تباعد أعلى الزر */
-}
-
-.download-button {
-   padding: 15px; /* تباعد داخلي للزر */
-   border-radius: 5px; /* زوايا دائرية للزر */
-   border: none; /* إزالة الحدود */
-   background-color: #28a745; /* لون أخضر */
-   color: white; /* لون النص */
-   font-size: large; /* حجم خط أكبر */
-   cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
-   transition: all 0.3s ease; /* تأثير سلس عند التمرير */
-}
-
-.download-button:hover {
-   background-color: #218838; /* لون أخضر داكن عند التمرير */
+   background-color:#0056b3; /* لون الزر عند التمرير */
 }
 
 /* تنسيق الفوتر */
 footer {
-   background-color: #343a40; 
-   color: #ffffff; 
-   text-align: center; 
-   padding: 10px 0;
+   background-color :#343a40 ; 
+   color:#ffffff ; 
+   text-align:center ; 
+   padding :10px ;
 }
