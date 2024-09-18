@@ -12,7 +12,7 @@ body {
 header {
     background: linear-gradient(to right, #007bff, #6610f2); /* خلفية متدرجة */
     color: #ffffff;
-    padding: 20px; /* زيادة الحواف */
+    padding-top: 20px; /* زيادة الحواف */
     text-align: center; /* محاذاة النص إلى المنتصف */
 }
 
@@ -20,7 +20,8 @@ header {
     width: 100%; /* اجعل العرض 100% من عرض الحاوية */
     height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
     display: block; /* يمنع إضافة مسافة أسفل الصورة */
-    margin: 0 auto; /* محاذاة الصورة في المنتصف */
+    margin: 0; /* إزالة أي تباعد */
+    padding: 0; /* إزالة أي حشوة */
 }
 
 nav ul {
