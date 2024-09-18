@@ -48,9 +48,9 @@ options = {
   series: [{
       points: [
           { x: '7eSen TV', y: 90 },
-          { x: 'تطبيق A', y: 70 },
-          { x: 'تطبيق B', y: 60 },
-          { x: 'تطبيق C', y: 50 }
+          { x: 'yacine', y: 70 },
+          { x: 'ostora', y: 60 },
+          { x: 'drama live', y: 50 }
       ]
      }],
      
