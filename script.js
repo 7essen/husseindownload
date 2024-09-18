@@ -42,7 +42,7 @@ var chart,
 options = { 
   debug: true, 
   type: 'column', 
-  title_label_text: 'أداء التطبيقات', 
+  title_label_text: 'نسبة الجودة والثبات', 
   defaultPoint_label_visible: true,
   
   series: [{
