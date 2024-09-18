@@ -12,26 +12,36 @@ body {
 header {
     background: linear-gradient(to right, #007bff, #6610f2); /* خلفية متدرجة */
     color: #ffffff;
-    padding-top: 20px; /* زيادة الحواف */
+    padding: 20px 0; /* زيادة الحواف */
     text-align: center; /* محاذاة النص إلى المنتصف */
 }
 
+
 .main-image {
-    width: 100%; /* اجعل العرض 100% من عرض الحاوية */
-    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
-    display: block; /* يمنع إضافة مسافة أسفل الصورة */
+    width: 650px; /* الحفاظ على نسبة العرض إلى الارتفاع */
     margin: 0; /* إزالة أي تباعد */
     padding: 0; /* إزالة أي حشوة */
+}
+
+@media (max-width: 768px) {
+    .main-image {
+       width: 100%;
+    }
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 nav ul li a {
@@ -53,35 +63,35 @@ h2 {
 
 /* سلايدر لقطات الشاشة */
 .swiper-container {
-   width:100%;
-   height:auto; 
-   display:flex ;
-   justify-content:center;
-   overflow:hidden;
-   position:relative; /* لجعل النقاط تحت الصورة */
-}
-
-.swiper-slide {
-   opacity :0; /* إخفاء جميع الشرائح في البداية */
-   transition :opacity .5s ease; /* تأثير سلس عند تغيير الشفافية */
-   visibility :hidden; /* إخفاء الشرائح بشكل كامل */
-   border-radius :25px; /* حواف دائرية للشرائح */
-   overflow:hidden;
-}
-
-.swiper-slide-active {
-   opacity :1; /* إظهار الشريحة النشطة فقط */
-   visibility :visible; /* جعل الشريحة النشطة مرئية */
-   display:flex;
-   justify-content:center;
-
-}
-
-.swiper-slide img {
-   width :100%; /* عرض الصورة بالكامل */
-   height:auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
-   border-radius :25px !important; /* زوايا دائرية للصورة داخل السلايدر */
-}
+    width: 100%;
+    height: auto; 
+    display: flex ;
+    justify-content: center;
+    overflow: hidden;
+    position: relative; /* لجعل النقاط تحت الصورة */
+ }
+ 
+ .swiper-slide {
+    opacity: 0; /* إخفاء جميع الشرائح في البداية */
+    transition: opacity 0.5s ease; /* تأثير سلس عند تغيير الشفافية */
+    visibility: hidden; /* إخفاء الشرائح بشكل كامل */
+    border-radius: 10px;
+    overflow: hidden;
+ }
+ 
+ .swiper-slide-active {
+    opacity: 1; /* إظهار الشريحة النشطة فقط */
+    visibility: visible; /* جعل الشريحة النشطة مرئية */
+    display: flex;
+    justify-content: center;
+ 
+ }
+ 
+ .swiper-slide img {
+    width: 100%; /* عرض الصورة بالكامل */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border-radius: 10px !important; /* زوايا دائرية للصورة */
+ }
 
 /* تنسيق أزرار التنزيل */
 .download-buttons {
@@ -172,3 +182,49 @@ footer {
    text-align:center ; 
    padding :10px ;
 }
+
+
+
+
+/* Mohamed Hasan */
+
+
+.images-container {
+
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .images-container div {
+       width: calc(1/4);
+       padding: 15px;
+ }
+ 
+ .images-container div img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+ }
+ 
+ 
+    .lg-hidden {
+       display: none;
+    }
+    
+    
+    .lg-visible {
+       display: block;
+    }
+    
+    @media (max-width: 768px) {
+       .sm-hidden {
+          display: none;
+       }
+       
+       
+       .sm-visible-flex {
+          display: flex;
+       }
+    }
